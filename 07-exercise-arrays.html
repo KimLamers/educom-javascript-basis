@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script>
+
+        // SHOPPING LIST
+
+        //shoppingList = ["Apple", "Banana", "Pear", "Grapes", "Mango", "Apple", "Pear","Melon"]
+
+
+        const shoppingList = [
+            { name: "Apple", amount: 4, price: 1},
+            { name: "Banana", amount: 2, price: 2},
+            { name: "Pear", amount: 2, price: 2},
+            { name: "Grapes", amount: 1, price: 3},
+            { name: "Mango", amount: 2, price: 4},
+            { name: "Melon", amount: 1, price: 3}
+        ]
+        // PRICE of each product
+
+            // let priceApples = 1
+            // let priceBanana = 2
+            // let pricePears = 2
+            // let priceGrapes = 3
+            // let priceMangos = 4
+
+        // PRICE of shopping list ex. BTW
+
+            let shoppingListTotal = 0
+
+            function shoppingListPrices(list) {
+                let total = 0
+                list.forEach( item => {
+                    total += ( item.amount ? item.amount * item.price : item.price )
+                })
+
+                return(total)
+            }
+
+            let prices = shoppingListPrices(shoppingList)
+            console.log(`Your total price ex. BTW is ${prices} euros`)
+            
+        // TOTAL FINAL INCL BTW
+
+            let BTW = 1.21
+
+            let addedBTW = prices * BTW
+            console.log(`Your total price incl. BTW is ${addedBTW} euros`)
+
+        </script>
+    </head>
+</html>
