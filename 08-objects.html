@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+
+            const car = { 
+                brand: "Fiat",
+                type: "500",
+                color: "Red",
+                weight: 850
+            }
+
+           // car.numberOfDoors = 2
+           // console.log(car)
+
+           car.getColor = function () {
+                return(this.color)
+           }
+
+           car.getType = function () {
+                return(this.type)
+           }
+
+           console.log(car.getColor())
+           console.log(car.getType())
+
+        </script>
+    </head>
+</html>
